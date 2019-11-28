@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		47D1F931A92256BF0735238D /* Pods_KotlinIOS_KotlinIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DE02CC102A434476A3B796F /* Pods_KotlinIOS_KotlinIOSUITests.framework */; };
+		C3284DE8238531A300D03295 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3284DE7238531A300D03295 /* File.swift */; };
+		C32FFD3323755A3A00A14739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FFD3223755A3A00A14739 /* AppDelegate.swift */; };
+		C32FFD3523755A3A00A14739 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FFD3423755A3A00A14739 /* SceneDelegate.swift */; };
+		C32FFD3723755A3A00A14739 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FFD3623755A3A00A14739 /* ViewController.swift */; };
+		C32FFD3A23755A3A00A14739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32FFD3823755A3A00A14739 /* Main.storyboard */; };
+		C32FFD3C23755A3D00A14739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C32FFD3B23755A3D00A14739 /* Assets.xcassets */; };
+		C32FFD3F23755A3D00A14739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C32FFD3D23755A3D00A14739 /* LaunchScreen.storyboard */; };
+		C32FFD4A23755A3D00A14739 /* KotlinIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FFD4923755A3D00A14739 /* KotlinIOSTests.swift */; };
+		C32FFD5523755A3D00A14739 /* KotlinIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32FFD5423755A3D00A14739 /* KotlinIOSUITests.swift */; };
+		C38C3088237597040034964C /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38C3087237597040034964C /* SharedCode.framework */; };
+		C38C3089237597040034964C /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C38C3087237597040034964C /* SharedCode.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C38C308C23759CDA0034964C /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38C3087237597040034964C /* SharedCode.framework */; };
+		C47076F8698C20EE03ABF3FC /* Pods_KotlinIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9EC95DA6F7D9D6B4277ED8 /* Pods_KotlinIOSTests.framework */; };
+		DAC74590D4F733498704D136 /* Pods_KotlinIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2407558DE4208896CF9A0FB /* Pods_KotlinIOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C32FFD4623755A3D00A14739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C32FFD2723755A3A00A14739 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C32FFD2E23755A3A00A14739;
+			remoteInfo = KotlinIOS;
+		};
+		C32FFD5123755A3D00A14739 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C32FFD2723755A3A00A14739 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C32FFD2E23755A3A00A14739;
+			remoteInfo = KotlinIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C38C308A237597040034964C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C38C3089237597040034964C /* SharedCode.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00359105D65E34AB50F60C56 /* Pods-KotlinIOS-KotlinIOSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinIOS-KotlinIOSUITests.release.xcconfig"; path = "Target Support Files/Pods-KotlinIOS-KotlinIOSUITests/Pods-KotlinIOS-KotlinIOSUITests.release.xcconfig"; sourceTree = "<group>"; };
+		13B27692CBB405AE8230A563 /* Pods-KotlinIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinIOSTests.release.xcconfig"; path = "Target Support Files/Pods-KotlinIOSTests/Pods-KotlinIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		454EC5D5A4BC49735702CF5B /* Pods-KotlinIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinIOS.debug.xcconfig"; path = "Target Support Files/Pods-KotlinIOS/Pods-KotlinIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4E459CC695C2C7BE77995C5C /* Pods-KotlinIOS-KotlinIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinIOS-KotlinIOSUITests.debug.xcconfig"; path = "Target Support Files/Pods-KotlinIOS-KotlinIOSUITests/Pods-KotlinIOS-KotlinIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		67E786C9EC29863612C603F6 /* Pods-KotlinIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinIOS.release.xcconfig"; path = "Target Support Files/Pods-KotlinIOS/Pods-KotlinIOS.release.xcconfig"; sourceTree = "<group>"; };
+		6DE02CC102A434476A3B796F /* Pods_KotlinIOS_KotlinIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotlinIOS_KotlinIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A9EC95DA6F7D9D6B4277ED8 /* Pods_KotlinIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotlinIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3284DE7238531A300D03295 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		C32FFD2F23755A3A00A14739 /* KotlinIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotlinIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32FFD3223755A3A00A14739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C32FFD3423755A3A00A14739 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C32FFD3623755A3A00A14739 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C32FFD3923755A3A00A14739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C32FFD3B23755A3D00A14739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C32FFD3E23755A3D00A14739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C32FFD4023755A3D00A14739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32FFD4523755A3D00A14739 /* KotlinIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KotlinIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32FFD4923755A3D00A14739 /* KotlinIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinIOSTests.swift; sourceTree = "<group>"; };
+		C32FFD4B23755A3D00A14739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C32FFD5023755A3D00A14739 /* KotlinIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KotlinIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32FFD5423755A3D00A14739 /* KotlinIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotlinIOSUITests.swift; sourceTree = "<group>"; };
+		C32FFD5623755A3D00A14739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C38C3087237597040034964C /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		F2407558DE4208896CF9A0FB /* Pods_KotlinIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotlinIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB4EB752E4B2C295F912E855 /* Pods-KotlinIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotlinIOSTests.debug.xcconfig"; path = "Target Support Files/Pods-KotlinIOSTests/Pods-KotlinIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C32FFD2C23755A3A00A14739 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C38C308C23759CDA0034964C /* SharedCode.framework in Frameworks */,
+				C38C3088237597040034964C /* SharedCode.framework in Frameworks */,
+				DAC74590D4F733498704D136 /* Pods_KotlinIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32FFD4223755A3D00A14739 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C47076F8698C20EE03ABF3FC /* Pods_KotlinIOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32FFD4D23755A3D00A14739 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47D1F931A92256BF0735238D /* Pods_KotlinIOS_KotlinIOSUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE4A6951A5F0D2CB3468C2E1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				454EC5D5A4BC49735702CF5B /* Pods-KotlinIOS.debug.xcconfig */,
+				67E786C9EC29863612C603F6 /* Pods-KotlinIOS.release.xcconfig */,
+				4E459CC695C2C7BE77995C5C /* Pods-KotlinIOS-KotlinIOSUITests.debug.xcconfig */,
+				00359105D65E34AB50F60C56 /* Pods-KotlinIOS-KotlinIOSUITests.release.xcconfig */,
+				FB4EB752E4B2C295F912E855 /* Pods-KotlinIOSTests.debug.xcconfig */,
+				13B27692CBB405AE8230A563 /* Pods-KotlinIOSTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C3284DE62385311900D03295 /* the_rx */ = {
+			isa = PBXGroup;
+			children = (
+				C3284DE7238531A300D03295 /* File.swift */,
+			);
+			path = the_rx;
+			sourceTree = "<group>";
+		};
+		C32FFD2623755A3A00A14739 = {
+			isa = PBXGroup;
+			children = (
+				C3284DE62385311900D03295 /* the_rx */,
+				C32FFD3123755A3A00A14739 /* KotlinIOS */,
+				C32FFD4823755A3D00A14739 /* KotlinIOSTests */,
+				C32FFD5323755A3D00A14739 /* KotlinIOSUITests */,
+				C32FFD3023755A3A00A14739 /* Products */,
+				C38C3086237597030034964C /* Frameworks */,
+				BE4A6951A5F0D2CB3468C2E1 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		C32FFD3023755A3A00A14739 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C32FFD2F23755A3A00A14739 /* KotlinIOS.app */,
+				C32FFD4523755A3D00A14739 /* KotlinIOSTests.xctest */,
+				C32FFD5023755A3D00A14739 /* KotlinIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C32FFD3123755A3A00A14739 /* KotlinIOS */ = {
+			isa = PBXGroup;
+			children = (
+				C32FFD3223755A3A00A14739 /* AppDelegate.swift */,
+				C32FFD3423755A3A00A14739 /* SceneDelegate.swift */,
+				C32FFD3623755A3A00A14739 /* ViewController.swift */,
+				C32FFD3823755A3A00A14739 /* Main.storyboard */,
+				C32FFD3B23755A3D00A14739 /* Assets.xcassets */,
+				C32FFD3D23755A3D00A14739 /* LaunchScreen.storyboard */,
+				C32FFD4023755A3D00A14739 /* Info.plist */,
+			);
+			path = KotlinIOS;
+			sourceTree = "<group>";
+		};
+		C32FFD4823755A3D00A14739 /* KotlinIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C32FFD4923755A3D00A14739 /* KotlinIOSTests.swift */,
+				C32FFD4B23755A3D00A14739 /* Info.plist */,
+			);
+			path = KotlinIOSTests;
+			sourceTree = "<group>";
+		};
+		C32FFD5323755A3D00A14739 /* KotlinIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C32FFD5423755A3D00A14739 /* KotlinIOSUITests.swift */,
+				C32FFD5623755A3D00A14739 /* Info.plist */,
+			);
+			path = KotlinIOSUITests;
+			sourceTree = "<group>";
+		};
+		C38C3086237597030034964C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C38C3087237597040034964C /* SharedCode.framework */,
+				F2407558DE4208896CF9A0FB /* Pods_KotlinIOS.framework */,
+				6DE02CC102A434476A3B796F /* Pods_KotlinIOS_KotlinIOSUITests.framework */,
+				8A9EC95DA6F7D9D6B4277ED8 /* Pods_KotlinIOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C32FFD2E23755A3A00A14739 /* KotlinIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C32FFD5923755A3D00A14739 /* Build configuration list for PBXNativeTarget "KotlinIOS" */;
+			buildPhases = (
+				EB6C68437FE6FCFC3B2B0C97 /* [CP] Check Pods Manifest.lock */,
+				C38C308B237598670034964C /* ShellScript */,
+				C32FFD2B23755A3A00A14739 /* Sources */,
+				C32FFD2C23755A3A00A14739 /* Frameworks */,
+				C32FFD2D23755A3A00A14739 /* Resources */,
+				C38C308A237597040034964C /* Embed Frameworks */,
+				BD841CDD7C70C3DD9B37AFD0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KotlinIOS;
+			productName = KotlinIOS;
+			productReference = C32FFD2F23755A3A00A14739 /* KotlinIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C32FFD4423755A3D00A14739 /* KotlinIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C32FFD5C23755A3D00A14739 /* Build configuration list for PBXNativeTarget "KotlinIOSTests" */;
+			buildPhases = (
+				76ABBB25582BF11018A832B0 /* [CP] Check Pods Manifest.lock */,
+				C32FFD4123755A3D00A14739 /* Sources */,
+				C32FFD4223755A3D00A14739 /* Frameworks */,
+				C32FFD4323755A3D00A14739 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C32FFD4723755A3D00A14739 /* PBXTargetDependency */,
+			);
+			name = KotlinIOSTests;
+			productName = KotlinIOSTests;
+			productReference = C32FFD4523755A3D00A14739 /* KotlinIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C32FFD4F23755A3D00A14739 /* KotlinIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C32FFD5F23755A3D00A14739 /* Build configuration list for PBXNativeTarget "KotlinIOSUITests" */;
+			buildPhases = (
+				BE13A9B0B8B862A947D9929D /* [CP] Check Pods Manifest.lock */,
+				C32FFD4C23755A3D00A14739 /* Sources */,
+				C32FFD4D23755A3D00A14739 /* Frameworks */,
+				C32FFD4E23755A3D00A14739 /* Resources */,
+				0597469CA33DBDB1E4E7FB4A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C32FFD5223755A3D00A14739 /* PBXTargetDependency */,
+			);
+			name = KotlinIOSUITests;
+			productName = KotlinIOSUITests;
+			productReference = C32FFD5023755A3D00A14739 /* KotlinIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C32FFD2723755A3A00A14739 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Marc Gilbert";
+				TargetAttributes = {
+					C32FFD2E23755A3A00A14739 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					C32FFD4423755A3D00A14739 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = C32FFD2E23755A3A00A14739;
+					};
+					C32FFD4F23755A3D00A14739 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = C32FFD2E23755A3A00A14739;
+					};
+				};
+			};
+			buildConfigurationList = C32FFD2A23755A3A00A14739 /* Build configuration list for PBXProject "KotlinIOS" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C32FFD2623755A3A00A14739;
+			productRefGroup = C32FFD3023755A3A00A14739 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C32FFD2E23755A3A00A14739 /* KotlinIOS */,
+				C32FFD4423755A3D00A14739 /* KotlinIOSTests */,
+				C32FFD4F23755A3D00A14739 /* KotlinIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C32FFD2D23755A3A00A14739 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32FFD3F23755A3D00A14739 /* LaunchScreen.storyboard in Resources */,
+				C32FFD3C23755A3D00A14739 /* Assets.xcassets in Resources */,
+				C32FFD3A23755A3A00A14739 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32FFD4323755A3D00A14739 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32FFD4E23755A3D00A14739 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0597469CA33DBDB1E4E7FB4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinIOS-KotlinIOSUITests/Pods-KotlinIOS-KotlinIOSUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinIOS-KotlinIOSUITests/Pods-KotlinIOS-KotlinIOSUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotlinIOS-KotlinIOSUITests/Pods-KotlinIOS-KotlinIOSUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76ABBB25582BF11018A832B0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotlinIOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD841CDD7C70C3DD9B37AFD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinIOS/Pods-KotlinIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotlinIOS/Pods-KotlinIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotlinIOS/Pods-KotlinIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE13A9B0B8B862A947D9929D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotlinIOS-KotlinIOSUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C38C308B237598670034964C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\ncd \"$SRCROOT/../../SharedCode/build/xcode-frameworks\"\n./gradlew :SharedCode:packForXCode -PXCODE_CONFIGURATION=${CONFIGURATION}\n";
+		};
+		EB6C68437FE6FCFC3B2B0C97 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotlinIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C32FFD2B23755A3A00A14739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32FFD3723755A3A00A14739 /* ViewController.swift in Sources */,
+				C3284DE8238531A300D03295 /* File.swift in Sources */,
+				C32FFD3323755A3A00A14739 /* AppDelegate.swift in Sources */,
+				C32FFD3523755A3A00A14739 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32FFD4123755A3D00A14739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32FFD4A23755A3D00A14739 /* KotlinIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C32FFD4C23755A3D00A14739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C32FFD5523755A3D00A14739 /* KotlinIOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C32FFD4723755A3D00A14739 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C32FFD2E23755A3A00A14739 /* KotlinIOS */;
+			targetProxy = C32FFD4623755A3D00A14739 /* PBXContainerItemProxy */;
+		};
+		C32FFD5223755A3D00A14739 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C32FFD2E23755A3A00A14739 /* KotlinIOS */;
+			targetProxy = C32FFD5123755A3D00A14739 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C32FFD3823755A3A00A14739 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C32FFD3923755A3A00A14739 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C32FFD3D23755A3D00A14739 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C32FFD3E23755A3D00A14739 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C32FFD5723755A3D00A14739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C32FFD5823755A3D00A14739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C32FFD5A23755A3D00A14739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454EC5D5A4BC49735702CF5B /* Pods-KotlinIOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../SharedCode/build/xcode-frameworks/**";
+				INFOPLIST_FILE = KotlinIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrains.handson.mpp.mobile.KotlinIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C32FFD5B23755A3D00A14739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67E786C9EC29863612C603F6 /* Pods-KotlinIOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../../SharedCode/build/xcode-frameworks/**";
+				INFOPLIST_FILE = KotlinIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrains.handson.mpp.mobile.KotlinIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C32FFD5D23755A3D00A14739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB4EB752E4B2C295F912E855 /* Pods-KotlinIOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KotlinIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrains.handson.mpp.mobile.KotlinIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KotlinIOS.app/KotlinIOS";
+			};
+			name = Debug;
+		};
+		C32FFD5E23755A3D00A14739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13B27692CBB405AE8230A563 /* Pods-KotlinIOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KotlinIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrains.handson.mpp.mobile.KotlinIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KotlinIOS.app/KotlinIOS";
+			};
+			name = Release;
+		};
+		C32FFD6023755A3D00A14739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E459CC695C2C7BE77995C5C /* Pods-KotlinIOS-KotlinIOSUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KotlinIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrains.handson.mpp.mobile.KotlinIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KotlinIOS;
+			};
+			name = Debug;
+		};
+		C32FFD6123755A3D00A14739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00359105D65E34AB50F60C56 /* Pods-KotlinIOS-KotlinIOSUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KotlinIOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jetbrains.handson.mpp.mobile.KotlinIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KotlinIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C32FFD2A23755A3A00A14739 /* Build configuration list for PBXProject "KotlinIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C32FFD5723755A3D00A14739 /* Debug */,
+				C32FFD5823755A3D00A14739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32FFD5923755A3D00A14739 /* Build configuration list for PBXNativeTarget "KotlinIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C32FFD5A23755A3D00A14739 /* Debug */,
+				C32FFD5B23755A3D00A14739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32FFD5C23755A3D00A14739 /* Build configuration list for PBXNativeTarget "KotlinIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C32FFD5D23755A3D00A14739 /* Debug */,
+				C32FFD5E23755A3D00A14739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C32FFD5F23755A3D00A14739 /* Build configuration list for PBXNativeTarget "KotlinIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C32FFD6023755A3D00A14739 /* Debug */,
+				C32FFD6123755A3D00A14739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C32FFD2723755A3A00A14739 /* Project object */;
+}
