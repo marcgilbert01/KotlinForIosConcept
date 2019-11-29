@@ -4,6 +4,6 @@ import com.jetbrains.handson.mpp.mobile.the_rx.Observable
 
 interface ObservableFactory {
 
-    fun just(str: String): Observable
+    fun <T>just(t: T): Observable<T>
 
 }

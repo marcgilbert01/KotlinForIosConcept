@@ -9,7 +9,7 @@ class MainPresenter(
 
     override fun onViewStart() {
 
-        rxFactories.getObservableFactory().just("string only from the observable with rx factory")
+        rxFactories.getObservableFactory().just("object from the observable with rx factory")
             .subscribe({
                 view.showMessage(it)
             },{

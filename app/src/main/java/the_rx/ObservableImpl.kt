@@ -3,15 +3,16 @@ package the_rx
 import com.jetbrains.handson.mpp.mobile.the_rx.Disposable
 import com.jetbrains.handson.mpp.mobile.the_rx.Observable
 
-class ObservableImpl(
-    private val observable: io.reactivex.Observable<String>
-): Observable {
+class ObservableImpl<T>(
+    private val observable: io.reactivex.Observable<T>
+): Observable<T> {
 
-//    override fun subscribe(onNext: (T) -> Unit, onError: (Throwable) -> Unit): Disposable {
-//        return DisposableImpl(observable.subscribe(onNext, onError))
-//    }
-
-    override fun subscribe(onNext: (String) -> Unit, onError: (Throwable) -> Unit): Disposable {
+    override fun subscribe(onNext: (T) -> Unit, onError: (Throwable) -> Unit): Disposable {
         return DisposableImpl(observable.subscribe(onNext, onError))
     }
+//
+//    override fun subscribe(onNext: (String) -> Unit, onError: (Throwable) -> Unit): Disposable {
+//
+//        return DisposableImpl(observable.subscribe(onNext, onError))
+//    }
 }

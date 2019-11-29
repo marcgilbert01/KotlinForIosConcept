@@ -17,24 +17,8 @@ class ViewController: UIViewController, MainContractView {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        TheRxInit().initialise()
-//            .subscribe { completable in
-//                switch completable {
-//                    case .completed:
-//                        print("Completed with no error")
-//                        self.presenter = MainPresenter(view: self)
-//                        self.presenter?.onViewStart()
-//
-//                    case .error(let error):
-//                        print("Completed with an error: \(error.localizedDescription)")
-//                }
-//            }
-        
-            
-        
         self.presenter = MainPresenter(view: self, rxFactories: IosRxFactories())
         self.presenter?.onViewStart()
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,18 +35,20 @@ class ViewController: UIViewController, MainContractView {
         func getObservableFactory() -> ObservableFactory {
             return IosObservableFactory()
         }
-    
     }
     
     class IosObservableFactory: ObservableFactory {
         
-        func just(str: String) -> SharedCode.Observable {
-            
-            return ObservableImpl(
-                observable: RxSwift.Observable.just(str)
-            )
+        func just(t: Any?) -> SharedCode.Observable {
+            return ObservableImpl(observable: RxSwift.Observable.just(t))
         }
+        
+//        func just(str: String) -> SharedCode.Observable {
+//
+//            return ObservableImpl(
+//                observable: RxSwift.Observable.just(str)
+//            )
+//        }
     }
-    
 }
 

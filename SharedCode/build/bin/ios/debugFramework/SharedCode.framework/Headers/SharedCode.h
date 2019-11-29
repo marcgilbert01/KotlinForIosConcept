@@ -184,13 +184,13 @@ __attribute__((swift_name("Disposable")))
 __attribute__((swift_name("Observable")))
 @protocol SharedCodeObservable
 @required
-- (id<SharedCodeDisposable>)subscribeOnNext:(void (^)(NSString *))onNext onError:(void (^)(SharedCodeKotlinThrowable *))onError __attribute__((swift_name("subscribe(onNext:onError:)")));
+- (id<SharedCodeDisposable>)subscribeOnNext:(void (^)(id _Nullable))onNext onError:(void (^)(SharedCodeKotlinThrowable *))onError __attribute__((swift_name("subscribe(onNext:onError:)")));
 @end;
 
 __attribute__((swift_name("ObservableFactory")))
 @protocol SharedCodeObservableFactory
 @required
-- (id<SharedCodeObservable>)justStr:(NSString *)str __attribute__((swift_name("just(str:)")));
+- (id<SharedCodeObservable>)justT:(id _Nullable)t __attribute__((swift_name("just(t:)")));
 @end;
 
 __attribute__((swift_name("RxFactories")))
