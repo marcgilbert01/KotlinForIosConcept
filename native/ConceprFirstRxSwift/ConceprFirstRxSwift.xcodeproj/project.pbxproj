@@ -137,19 +137,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C302B8A32383135C0062623A /* the_rx */ = {
+		C302B8A32383135C0062623A /* rxProxy */ = {
 			isa = PBXGroup;
 			children = (
 				C3E05EC22385751000C9E313 /* ObservableImpl.swift */,
 				C3BD016F2385B0E10057DD0B /* DisposableImpl.swift */,
 			);
-			path = the_rx;
+			path = rxProxy;
 			sourceTree = "<group>";
 		};
 		C36FC1C22382976900805044 = {
 			isa = PBXGroup;
 			children = (
-				C302B8A32383135C0062623A /* the_rx */,
+				C302B8A32383135C0062623A /* rxProxy */,
 				C36FC1CD2382976900805044 /* ConceprFirstRxSwift */,
 				C36FC1E42382976B00805044 /* ConceprFirstRxSwiftTests */,
 				C36FC1EF2382976B00805044 /* ConceprFirstRxSwiftUITests */,

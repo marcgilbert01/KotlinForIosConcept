@@ -9,7 +9,7 @@ import com.jetbrains.handson.mpp.mobile.the_rx.Observable
 import com.jetbrains.handson.mpp.mobile.the_rx.factories.ObservableFactory
 import com.jetbrains.handson.mpp.mobile.the_rx.factories.RxFactories
 import kotlinx.android.synthetic.main.activity_main.*
-import the_rx.ObservableImpl
+import rxProxy.ObservableImpl
 
 class MainActivity : AppCompatActivity(),MainContract.View {
 

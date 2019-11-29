@@ -1,4 +1,4 @@
-package the_rx
+package rxProxy
 
 import com.jetbrains.handson.mpp.mobile.the_rx.Disposable
 

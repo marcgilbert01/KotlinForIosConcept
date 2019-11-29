@@ -9,7 +9,7 @@ class MainPresenter(
 
     override fun onViewStart() {
 
-        rxFactories.getObservableFactory().just("object from the observable with rx factory")
+        rxFactories.getObservableFactory().just("object from the observable with rx proxy factory")
             .subscribe({
                 view.showMessage(it)
             },{
