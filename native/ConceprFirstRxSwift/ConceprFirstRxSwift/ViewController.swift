@@ -11,7 +11,7 @@ import RxSwift
 import SharedCode
 
 class ViewController: UIViewController, MainContractView {
-    
+
     var presenter : MainContractPresenter?
     
     override func viewDidLoad() {
@@ -27,8 +27,15 @@ class ViewController: UIViewController, MainContractView {
 
     func showMessage(message: String) {
         let button: UIButton = self.view.viewWithTag(123) as! UIButton
-        button.setTitle(message, for: .normal)    }
+        button.setTitle(message, for: .normal)
+    }
     
+    func displaySomeObject(someObject: SomeObject) {
+        let label: UILabel = self.view.viewWithTag(222) as! UILabel
+        label.text = someObject.str
+        let button: UIButton = self.view.viewWithTag(123) as! UIButton
+        button.setTitle(String(someObject.number), for: .normal)
+    }
     
     class IosRxFactories : SharedCode.RxFactories {
         
@@ -42,13 +49,6 @@ class ViewController: UIViewController, MainContractView {
         func just(t: Any?) -> SharedCode.Observable {
             return ObservableImpl(observable: RxSwift.Observable.just(t))
         }
-        
-//        func just(str: String) -> SharedCode.Observable {
-//
-//            return ObservableImpl(
-//                observable: RxSwift.Observable.just(str)
-//            )
-//        }
     }
 }
 

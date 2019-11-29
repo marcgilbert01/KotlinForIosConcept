@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.jetbrains.handson.mpp.mobile.MainContract
 import com.jetbrains.handson.mpp.mobile.MainPresenter
 import com.jetbrains.handson.mpp.mobile.createApplicationScreenMessage
+import com.jetbrains.handson.mpp.mobile.entities.SomeObject
 import com.jetbrains.handson.mpp.mobile.the_rx.Observable
 import com.jetbrains.handson.mpp.mobile.the_rx.factories.ObservableFactory
 import com.jetbrains.handson.mpp.mobile.the_rx.factories.RxFactories
@@ -43,7 +44,12 @@ class MainActivity : AppCompatActivity(),MainContract.View {
     }
 
     override fun showMessage(message: String) {
-        button.text = message
+        small_text_view.text = message
+    }
+
+    override fun displaySomeObject(someObject: SomeObject) {
+        small_text_view.text = someObject.str
+        button.text = someObject.number.toString()
     }
 
     override fun onStart() {

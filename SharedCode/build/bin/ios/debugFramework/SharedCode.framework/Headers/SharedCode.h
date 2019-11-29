@@ -6,7 +6,7 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class SharedCodeKotlinThrowable, SharedCodeKotlinArray;
+@class SharedCodeSomeObject, SharedCodeKotlinThrowable, SharedCodeKotlinArray;
 
 @protocol SharedCodeMainContractPresenter, SharedCodeMainContractView, SharedCodeRxFactories, SharedCodeDisposable, SharedCodeObservable, SharedCodeObservableFactory, SharedCodeKotlinIterator;
 
@@ -159,6 +159,7 @@ __attribute__((swift_name("MainContractView")))
 @protocol SharedCodeMainContractView
 @required
 - (void)showMessageMessage:(NSString *)message __attribute__((swift_name("showMessage(message:)")));
+- (void)displaySomeObjectSomeObject:(SharedCodeSomeObject *)someObject __attribute__((swift_name("displaySomeObject(someObject:)")));
 @end;
 
 __attribute__((swift_name("MainContractPresenter")))
@@ -172,6 +173,20 @@ __attribute__((swift_name("MainPresenter")))
 @interface SharedCodeMainPresenter : KotlinBase <SharedCodeMainContractPresenter>
 - (instancetype)initWithView:(id<SharedCodeMainContractView>)view rxFactories:(id<SharedCodeRxFactories>)rxFactories __attribute__((swift_name("init(view:rxFactories:)"))) __attribute__((objc_designated_initializer));
 - (void)onViewStart __attribute__((swift_name("onViewStart()")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("SomeObject")))
+@interface SharedCodeSomeObject : KotlinBase
+- (instancetype)initWithStr:(NSString *)str number:(int32_t)number __attribute__((swift_name("init(str:number:)"))) __attribute__((objc_designated_initializer));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+- (NSString *)component1 __attribute__((swift_name("component1()")));
+- (int32_t)component2 __attribute__((swift_name("component2()")));
+- (SharedCodeSomeObject *)doCopyStr:(NSString *)str number:(int32_t)number __attribute__((swift_name("doCopy(str:number:)")));
+@property (readonly) NSString *str __attribute__((swift_name("str")));
+@property (readonly) int32_t number __attribute__((swift_name("number")));
 @end;
 
 __attribute__((swift_name("Disposable")))
