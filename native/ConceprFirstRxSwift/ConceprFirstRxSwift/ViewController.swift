@@ -28,10 +28,10 @@ class ViewController: UIViewController, MainContractView {
         operationQueue.qualityOfService = QualityOfService.userInitiated
         ViewController.computationScheduler = OperationQueueScheduler(operationQueue: operationQueue) as? SchedulerType
         
-        
+  /*
         RxSwift.Observable
             .just("obs")
- 
+
         //.delay(.seconds(5), scheduler: ViewController.computationScheduler!)
             //.delay(.seconds(5), scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
             .delay(.seconds(5), scheduler: MainScheduler.instance)
@@ -52,6 +52,10 @@ class ViewController: UIViewController, MainContractView {
                     break
                 }
             }
+    */
+        
+        self.presenter = MainPresenter(view: self, rxFactories: IosRxFactories())
+        self.presenter?.onViewStart()
         
     }
     

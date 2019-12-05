@@ -12,7 +12,6 @@ class ObservableImpl<T> : SharedCode.Observable {
     var swiftObservable: RxSwift.Observable<T>
     
     func subscribe(onNext: @escaping (Any?) -> Void, onError: @escaping (KotlinThrowable) -> Void) -> SharedCode.Disposable {
-           
            return DisposableImpl(disposable:
             self.swiftObservable.subscribe { event in
                 
@@ -38,18 +37,12 @@ class ObservableImpl<T> : SharedCode.Observable {
     }
     
     func delay(millisec: Int64) -> SharedCode.Observable {
-        
-        let newobs = swiftObservable.delay(.milliseconds(123), scheduler: ViewController.computationScheduler!)
-        //maybe we shouldn;t use this scheduler 
-        
-        return ObservableImpl(observable: newobs)
-        
-        //return ObservableImpl(observable: observable.delay(.milliseconds(millisec),scheduler: ViewController.computationScheduler))
+        return ObservableImpl(observable: swiftObservable.delay(
+                .milliseconds(Int(millisec)),
+                scheduler: MainScheduler.instance))
     }
     
     private func convertToKotlinThrowable (error: Error)-> KotlinThrowable {
-        
         return KotlinThrowable(message: "error from rx swift")
     }
-    
 }
