@@ -29,8 +29,21 @@ class ObservableImpl<T> : SharedCode.Observable {
            )
        }
     
+    func subscribeOn(scheduler: Scheduler) -> SharedCode.Observable {
+        return self
+    }
+    
+    func observeOn(scheduler: Scheduler) -> SharedCode.Observable {
+        return self
+    }
+    
+    func delay(millisec: Int64) -> SharedCode.Observable {
+        return observable.delay(.milliseconds(millisec), null)
+    }
+    
     private func convertToKotlinThrowable (error: Error)-> KotlinThrowable {
         
         return KotlinThrowable(message: "error from rx swift")
     }
+    
 }

@@ -11,6 +11,7 @@
 		90A6510A865BC8C8BE35F55B /* Pods_ConceprFirstRxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99AEBE0AC469AC26878158F /* Pods_ConceprFirstRxSwiftTests.framework */; };
 		C302B89F23830F9E0062623A /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C302B89E23830F9E0062623A /* SharedCode.framework */; };
 		C302B8A023830F9E0062623A /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C302B89E23830F9E0062623A /* SharedCode.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3322AED2398F44600A9772F /* SchedulerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3322AEC2398F44600A9772F /* SchedulerImpl.swift */; };
 		C36FC1CF2382976900805044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FC1CE2382976900805044 /* AppDelegate.swift */; };
 		C36FC1D12382976900805044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FC1D02382976900805044 /* SceneDelegate.swift */; };
 		C36FC1D32382976900805044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FC1D22382976900805044 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		8281469D710B1D35B86EF0C4 /* Pods_ConceprFirstRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConceprFirstRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CD004E2F9AC4CBB4DD726F /* Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests/Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C302B89E23830F9E0062623A /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		C3322AEC2398F44600A9772F /* SchedulerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerImpl.swift; sourceTree = "<group>"; };
 		C36FC1CB2382976900805044 /* ConceprFirstRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConceprFirstRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36FC1CE2382976900805044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36FC1D02382976900805044 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 			children = (
 				C3E05EC22385751000C9E313 /* ObservableImpl.swift */,
 				C3BD016F2385B0E10057DD0B /* DisposableImpl.swift */,
+				C3322AEC2398F44600A9772F /* SchedulerImpl.swift */,
 			);
 			path = rxProxy;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				C3E05EC32385751000C9E313 /* ObservableImpl.swift in Sources */,
 				C36FC1CF2382976900805044 /* AppDelegate.swift in Sources */,
 				C36FC1D12382976900805044 /* SceneDelegate.swift in Sources */,
+				C3322AED2398F44600A9772F /* SchedulerImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +645,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../../SharedCode/build/xcode-frameworks",
+					"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa/RxCocoa.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay/RxRelay.framework/Headers",
+					"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift/RxSwift.framework/Headers",
+				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
@@ -666,6 +678,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"<Multiple",
+					"values>",
+					"$(SRCROOT)/../../SharedCode/build/xcode-frameworks",
+				);
 				INFOPLIST_FILE = ConceprFirstRxSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

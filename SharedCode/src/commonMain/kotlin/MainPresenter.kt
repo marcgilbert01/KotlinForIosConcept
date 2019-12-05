@@ -10,14 +10,17 @@ class MainPresenter(
 
     override fun onViewStart() {
 
-        rxFactories.getObservableFactory().just(SomeObject("nice message ", 123))
+        rxFactories.getObservableFactory()
+            .just(SomeObject("nice message ", 123))
+            .delay(3000)
+            .subscribeOn(rxFactories.getSchedulerModule().io())
+            .observeOn(rxFactories.getSchedulerModule().ui())
             .subscribe({
+               //rxFactories.getSleeper().sleep(3000)
                view.displaySomeObject(it)
-
             }, {
                 view.showMessage(it.message?:"unknow error")
             })
-
-        //view.showMessage("the message from the presenter")
+        view.showMessage("the message from the presenter")
     }
 }

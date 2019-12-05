@@ -8,7 +8,7 @@
 
 @class SharedCodeSomeObject, SharedCodeKotlinThrowable, SharedCodeKotlinArray;
 
-@protocol SharedCodeMainContractPresenter, SharedCodeMainContractView, SharedCodeRxFactories, SharedCodeDisposable, SharedCodeObservable, SharedCodeObservableFactory, SharedCodeKotlinIterator;
+@protocol SharedCodeMainContractPresenter, SharedCodeMainContractView, SharedCodeRxFactories, SharedCodeScheduler, SharedCodeDisposable, SharedCodeObservable, SharedCodeObservableFactory, SharedCodeSchedulerModule, SharedCodeSleeper, SharedCodeKotlinIterator;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -175,6 +175,24 @@ __attribute__((swift_name("MainPresenter")))
 - (void)onViewStart __attribute__((swift_name("onViewStart()")));
 @end;
 
+__attribute__((swift_name("Scheduler")))
+@protocol SharedCodeScheduler
+@required
+@end;
+
+__attribute__((swift_name("SchedulerModule")))
+@protocol SharedCodeSchedulerModule
+@required
+- (id<SharedCodeScheduler>)io __attribute__((swift_name("io()")));
+- (id<SharedCodeScheduler>)ui __attribute__((swift_name("ui()")));
+@end;
+
+__attribute__((swift_name("Sleeper")))
+@protocol SharedCodeSleeper
+@required
+- (void)sleepForMillisec:(int64_t)millisec __attribute__((swift_name("sleepFor(millisec:)")));
+@end;
+
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("SomeObject")))
 @interface SharedCodeSomeObject : KotlinBase
@@ -200,6 +218,9 @@ __attribute__((swift_name("Observable")))
 @protocol SharedCodeObservable
 @required
 - (id<SharedCodeDisposable>)subscribeOnNext:(void (^)(id _Nullable))onNext onError:(void (^)(SharedCodeKotlinThrowable *))onError __attribute__((swift_name("subscribe(onNext:onError:)")));
+- (id<SharedCodeObservable>)subscribeOnScheduler:(id<SharedCodeScheduler>)scheduler __attribute__((swift_name("subscribeOn(scheduler:)")));
+- (id<SharedCodeObservable>)observeOnScheduler:(id<SharedCodeScheduler>)scheduler __attribute__((swift_name("observeOn(scheduler:)")));
+- (id<SharedCodeObservable>)delayMillisec:(int64_t)millisec __attribute__((swift_name("delay(millisec:)")));
 @end;
 
 __attribute__((swift_name("ObservableFactory")))
@@ -212,6 +233,8 @@ __attribute__((swift_name("RxFactories")))
 @protocol SharedCodeRxFactories
 @required
 - (id<SharedCodeObservableFactory>)getObservableFactory __attribute__((swift_name("getObservableFactory()")));
+- (id<SharedCodeSchedulerModule>)getSchedulerModule __attribute__((swift_name("getSchedulerModule()")));
+- (id<SharedCodeSleeper>)getSleeper __attribute__((swift_name("getSleeper()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
