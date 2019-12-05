@@ -185,6 +185,7 @@ __attribute__((swift_name("SchedulerModule")))
 @required
 - (id<SharedCodeScheduler>)io __attribute__((swift_name("io()")));
 - (id<SharedCodeScheduler>)ui __attribute__((swift_name("ui()")));
+- (id<SharedCodeScheduler>)computation __attribute__((swift_name("computation()")));
 @end;
 
 __attribute__((swift_name("Sleeper")))

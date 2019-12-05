@@ -6,15 +6,15 @@ import RxSwift
 class ObservableImpl<T> : SharedCode.Observable {
     
     init(observable: RxSwift.Observable<T>) {
-      self.observable = observable
+      self.swiftObservable = observable
     }
 
-    var observable: RxSwift.Observable<T>
+    var swiftObservable: RxSwift.Observable<T>
     
     func subscribe(onNext: @escaping (Any?) -> Void, onError: @escaping (KotlinThrowable) -> Void) -> SharedCode.Disposable {
            
            return DisposableImpl(disposable:
-            self.observable.subscribe { event in
+            self.swiftObservable.subscribe { event in
                 
                 switch event {
                     
@@ -38,7 +38,13 @@ class ObservableImpl<T> : SharedCode.Observable {
     }
     
     func delay(millisec: Int64) -> SharedCode.Observable {
-        return observable.delay(.milliseconds(millisec), null)
+        
+        let newobs = swiftObservable.delay(.milliseconds(123), scheduler: ViewController.computationScheduler!)
+        //maybe we shouldn;t use this scheduler 
+        
+        return ObservableImpl(observable: newobs)
+        
+        //return ObservableImpl(observable: observable.delay(.milliseconds(millisec),scheduler: ViewController.computationScheduler))
     }
     
     private func convertToKotlinThrowable (error: Error)-> KotlinThrowable {

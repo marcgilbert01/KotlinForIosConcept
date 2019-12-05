@@ -12,6 +12,8 @@ import SharedCode
 
 class ViewController: UIViewController, MainContractView {
 
+    static var computationScheduler: SchedulerType?
+    
     var presenter : MainContractPresenter?
     
     override func viewDidLoad() {
@@ -21,17 +23,24 @@ class ViewController: UIViewController, MainContractView {
 //        self.presenter?.onViewStart()
 //
         
+        let operationQueue = OperationQueue()
+        operationQueue.maxConcurrentOperationCount = 3
+        operationQueue.qualityOfService = QualityOfService.userInitiated
+        ViewController.computationScheduler = OperationQueueScheduler(operationQueue: operationQueue) as? SchedulerType
         
         
         RxSwift.Observable
             .just("obs")
-            //.delay(.seconds(5), scheduler: OperationQueueScheduler.) // on java default is computation
-            .delay(.seconds(5), scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
-        .observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+ 
+        //.delay(.seconds(5), scheduler: ViewController.computationScheduler!)
+            //.delay(.seconds(5), scheduler: ConcurrentDispatchQueueScheduler(qos: .background))
+            .delay(.seconds(5), scheduler: MainScheduler.instance)
+            //.observeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            //.observeOn(MainScheduler.instance)
             .observeOn(MainScheduler.instance)
             .subscribe { event in
                 
-                sleep(3000)
+                //sleep(3000)
                 
                 switch event {
                     
@@ -43,8 +52,6 @@ class ViewController: UIViewController, MainContractView {
                     break
                 }
             }
-        
-    
         
     }
     
@@ -71,11 +78,11 @@ class ViewController: UIViewController, MainContractView {
         }
         
         func getSchedulerModule() -> SchedulerModule {
-            <#code#>
+            return IosSchedulerModule()
         }
 
         func getSleeper() -> Sleeper {
-            <#code#>
+            return IosSleeper()
         }
     }
 
@@ -86,7 +93,26 @@ class ViewController: UIViewController, MainContractView {
         }
     }
     
-
+    
+    class IosSchedulerModule: SchedulerModule {
+        func io() -> Scheduler {
+            return SchedulerImpl(schedulerType: ConcurrentDispatchQueueScheduler(qos: .background))
+        }
+        
+        func ui() -> Scheduler {
+            return SchedulerImpl(schedulerType: MainScheduler.instance)
+        }
+        
+        func computation() -> Scheduler {
+            return SchedulerImpl(schedulerType: ViewController.computationScheduler!)
+        }
+    }
+    
+    class IosSleeper: Sleeper {
+        func sleepFor(millisec: Int64) {
+            sleep(UInt32(millisec))
+        }
+    }
 }
 
 //        static let operationQueue = NSOperationQueue()
