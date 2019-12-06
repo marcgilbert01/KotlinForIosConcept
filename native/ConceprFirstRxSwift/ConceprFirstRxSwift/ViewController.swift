@@ -18,10 +18,6 @@ class ViewController: UIViewController, MainContractView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-//        self.presenter = MainPresenter(view: self, rxFactories: IosRxFactories())
-//        self.presenter?.onViewStart()
-//
         
         let operationQueue = OperationQueue()
         operationQueue.maxConcurrentOperationCount = 3
@@ -54,7 +50,7 @@ class ViewController: UIViewController, MainContractView {
             }
     */
         
-        self.presenter = MainPresenter(view: self, rxFactories: IosRxFactories())
+        self.presenter = MainPresenter(view: self, rxFactories: RxFactoriesImpl())
         self.presenter?.onViewStart()
         
     }
@@ -75,48 +71,48 @@ class ViewController: UIViewController, MainContractView {
         button.setTitle(String(someObject.number), for: .normal)
     }
     
-    class IosRxFactories : SharedCode.RxFactories {
-        
-        func getObservableFactory() -> ObservableFactory {
-            return IosObservableFactory()
-        }
-        
-        func getSchedulerModule() -> SchedulerModule {
-            return IosSchedulerModule()
-        }
-
-        func getSleeper() -> Sleeper {
-            return IosSleeper()
-        }
-    }
-
-    class IosObservableFactory: ObservableFactory {
-
-        func just(t: Any?) -> SharedCode.Observable {
-            return ObservableImpl(observable: RxSwift.Observable.just(t))
-        }
-    }
-    
-    
-    class IosSchedulerModule: SchedulerModule {
-        func io() -> Scheduler {
-            return SchedulerImpl(schedulerType: ConcurrentDispatchQueueScheduler(qos: .background))
-        }
-        
-        func ui() -> Scheduler {
-            return SchedulerImpl(schedulerType: MainScheduler.instance)
-        }
-        
-        func computation() -> Scheduler {
-            return SchedulerImpl(schedulerType: ViewController.computationScheduler!)
-        }
-    }
-    
-    class IosSleeper: Sleeper {
-        func sleepFor(millisec: Int64) {
-            sleep(UInt32(millisec))
-        }
-    }
+//    class IosRxFactories : SharedCode.RxFactories {
+//
+//        func getObservableFactory() -> ObservableFactory {
+//            return IosObservableFactory()
+//        }
+//
+//        func getSchedulerModule() -> SchedulerModule {
+//            return IosSchedulerModule()
+//        }
+//
+//        func getSleeper() -> Sleeper {
+//            return IosSleeper()
+//        }
+//    }
+//
+//    class IosObservableFactory: ObservableFactory {
+//
+//        func just(t: Any?) -> SharedCode.Observable {
+//            return ObservableImpl(observable: RxSwift.Observable.just(t))
+//        }
+//    }
+//
+//
+//    class IosSchedulerModule: SchedulerModule {
+//        func io() -> Scheduler {
+//            return SchedulerImpl(schedulerType: ConcurrentDispatchQueueScheduler(qos: .background))
+//        }
+//
+//        func ui() -> Scheduler {
+//            return SchedulerImpl(schedulerType: MainScheduler.instance)
+//        }
+//
+//        func computation() -> Scheduler {
+//            return SchedulerImpl(schedulerType: ViewController.computationScheduler!)
+//        }
+//    }
+//
+//    class IosSleeper: Sleeper {
+//        func sleepFor(millisec: Int64) {
+//            sleep(UInt32(millisec))
+//        }
+//    }
 }
 
 //        static let operationQueue = NSOperationQueue()

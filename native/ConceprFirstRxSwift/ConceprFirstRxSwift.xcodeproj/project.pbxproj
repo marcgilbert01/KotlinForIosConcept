@@ -11,7 +11,11 @@
 		90A6510A865BC8C8BE35F55B /* Pods_ConceprFirstRxSwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F99AEBE0AC469AC26878158F /* Pods_ConceprFirstRxSwiftTests.framework */; };
 		C302B89F23830F9E0062623A /* SharedCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C302B89E23830F9E0062623A /* SharedCode.framework */; };
 		C302B8A023830F9E0062623A /* SharedCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C302B89E23830F9E0062623A /* SharedCode.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C3167060239A4E2200A328D2 /* RxFactoriesImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C316705F239A4E2200A328D2 /* RxFactoriesImpl.swift */; };
+		C3167062239A4E3E00A328D2 /* ObservableFactoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167061239A4E3E00A328D2 /* ObservableFactoryImpl.swift */; };
+		C3167068239A4F4200A328D2 /* SchedulerModuleImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3167067239A4F4200A328D2 /* SchedulerModuleImpl.swift */; };
 		C3322AED2398F44600A9772F /* SchedulerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3322AEC2398F44600A9772F /* SchedulerImpl.swift */; };
+		C34D82E6239A8B7800D426EA /* SleeperImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34D82E5239A8B7800D426EA /* SleeperImpl.swift */; };
 		C36FC1CF2382976900805044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FC1CE2382976900805044 /* AppDelegate.swift */; };
 		C36FC1D12382976900805044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FC1D02382976900805044 /* SceneDelegate.swift */; };
 		C36FC1D32382976900805044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36FC1D22382976900805044 /* ViewController.swift */; };
@@ -64,7 +68,11 @@
 		8281469D710B1D35B86EF0C4 /* Pods_ConceprFirstRxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConceprFirstRxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CD004E2F9AC4CBB4DD726F /* Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests/Pods-ConceprFirstRxSwift-ConceprFirstRxSwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C302B89E23830F9E0062623A /* SharedCode.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SharedCode.framework; path = "../../SharedCode/build/xcode-frameworks/SharedCode.framework"; sourceTree = "<group>"; };
+		C316705F239A4E2200A328D2 /* RxFactoriesImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFactoriesImpl.swift; sourceTree = "<group>"; };
+		C3167061239A4E3E00A328D2 /* ObservableFactoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableFactoryImpl.swift; sourceTree = "<group>"; };
+		C3167067239A4F4200A328D2 /* SchedulerModuleImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerModuleImpl.swift; sourceTree = "<group>"; };
 		C3322AEC2398F44600A9772F /* SchedulerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerImpl.swift; sourceTree = "<group>"; };
+		C34D82E5239A8B7800D426EA /* SleeperImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleeperImpl.swift; sourceTree = "<group>"; };
 		C36FC1CB2382976900805044 /* ConceprFirstRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConceprFirstRxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36FC1CE2382976900805044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36FC1D02382976900805044 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 		C302B8A32383135C0062623A /* rxProxy */ = {
 			isa = PBXGroup;
 			children = (
+				C3EE7ABD239A4B2D00B2457D /* factories */,
 				C3E05EC22385751000C9E313 /* ObservableImpl.swift */,
 				C3BD016F2385B0E10057DD0B /* DisposableImpl.swift */,
 				C3322AEC2398F44600A9772F /* SchedulerImpl.swift */,
@@ -202,6 +211,17 @@
 				C36FC1F22382976B00805044 /* Info.plist */,
 			);
 			path = ConceprFirstRxSwiftUITests;
+			sourceTree = "<group>";
+		};
+		C3EE7ABD239A4B2D00B2457D /* factories */ = {
+			isa = PBXGroup;
+			children = (
+				C316705F239A4E2200A328D2 /* RxFactoriesImpl.swift */,
+				C3167061239A4E3E00A328D2 /* ObservableFactoryImpl.swift */,
+				C3167067239A4F4200A328D2 /* SchedulerModuleImpl.swift */,
+				C34D82E5239A8B7800D426EA /* SleeperImpl.swift */,
+			);
+			path = factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -466,9 +486,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36FC1D32382976900805044 /* ViewController.swift in Sources */,
+				C3167068239A4F4200A328D2 /* SchedulerModuleImpl.swift in Sources */,
+				C3167060239A4E2200A328D2 /* RxFactoriesImpl.swift in Sources */,
 				C3BD01702385B0E10057DD0B /* DisposableImpl.swift in Sources */,
+				C34D82E6239A8B7800D426EA /* SleeperImpl.swift in Sources */,
 				C3E05EC32385751000C9E313 /* ObservableImpl.swift in Sources */,
 				C36FC1CF2382976900805044 /* AppDelegate.swift in Sources */,
+				C3167062239A4E3E00A328D2 /* ObservableFactoryImpl.swift in Sources */,
 				C36FC1D12382976900805044 /* SceneDelegate.swift in Sources */,
 				C3322AED2398F44600A9772F /* SchedulerImpl.swift in Sources */,
 			);
