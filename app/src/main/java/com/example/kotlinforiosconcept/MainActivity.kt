@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import rxProxy.ObservableImpl
 import rxProxy.SchedulerImpl
 import rxProxy.SchedulerModuleOld
+import rxProxy.factories.RxFactoriesImpl
 
 class MainActivity : AppCompatActivity(),MainContract.View {
 
@@ -27,42 +28,7 @@ class MainActivity : AppCompatActivity(),MainContract.View {
         setContentView(R.layout.activity_main)
         main_text.text = createApplicationScreenMessage()
 
-        val rxFactories = object : RxFactories {
-            override fun getObservableFactory(): ObservableFactory {
-                return object : ObservableFactory {
-                    override fun <T> just(t: T): Observable<T> {
-                        return ObservableImpl(io.reactivex.Observable.just(t))
-                    }
-                }
-            }
-
-            override fun getSchedulerModule(): com.jetbrains.handson.mpp.mobile.rxProxy.factories.SchedulerModule {
-                return object: com.jetbrains.handson.mpp.mobile.rxProxy.factories.SchedulerModule {
-                    override fun io(): Scheduler {
-                        return SchedulerModuleOld.io()
-                    }
-
-                    override fun ui(): Scheduler {
-                        return SchedulerModuleOld.ui()
-                    }
-
-                    override fun computation(): Scheduler {
-                        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-                    }
-                }
-            }
-
-            override fun getSleeper(): Sleeper {
-
-                return object: Sleeper {
-                    override fun sleepFor(millisec: Long) {
-                        Thread.sleep(millisec)
-                    }
-                }
-            }
-        }
-
-        presenter = MainPresenter(this, rxFactories)
+        presenter = MainPresenter(this, RxFactoriesImpl())
     }
 
     override fun showMessage(message: String) {
