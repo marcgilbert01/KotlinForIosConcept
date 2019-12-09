@@ -11,7 +11,7 @@ class MainPresenter(
     override fun onViewStart() {
 
         rxFactories.getObservableFactory()
-            .just(SomeObject("creates factories impl for ios", 345))
+            .just(SomeObject("moves rx pro", 345))
             .delay(3000)
             .subscribeOn(rxFactories.getSchedulerModule().io())
             .observeOn(rxFactories.getSchedulerModule().ui())

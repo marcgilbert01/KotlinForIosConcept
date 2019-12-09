@@ -7,19 +7,14 @@ import com.jetbrains.handson.mpp.mobile.MainContract
 import com.jetbrains.handson.mpp.mobile.MainPresenter
 import com.jetbrains.handson.mpp.mobile.createApplicationScreenMessage
 import com.jetbrains.handson.mpp.mobile.entities.SomeObject
-import com.jetbrains.handson.mpp.mobile.rxProxy.Scheduler
-import com.jetbrains.handson.mpp.mobile.rxProxy.factories.Sleeper
-import com.jetbrains.handson.mpp.mobile.the_rx.Observable
-import com.jetbrains.handson.mpp.mobile.the_rx.factories.ObservableFactory
-import com.jetbrains.handson.mpp.mobile.the_rx.factories.RxFactories
-import io.reactivex.android.schedulers.AndroidSchedulers
+import com.jetbrains.handson.mpp.mobile.rxProxy.SchedulerImpl
 import kotlinx.android.synthetic.main.activity_main.*
-import rxProxy.ObservableImpl
-import rxProxy.SchedulerImpl
-import rxProxy.SchedulerModuleOld
-import rxProxy.factories.RxFactoriesImpl
+import com.jetbrains.handson.mpp.mobile.rxProxy.factories.RxFactoriesImpl
+import com.jetbrains.handson.mpp.mobile.rxProxy.factories.SchedulerModuleImpl
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 
-class MainActivity : AppCompatActivity(),MainContract.View {
+class MainActivity : AppCompatActivity(), MainContract.View {
 
     private var presenter: MainContract.Presenter? = null
 
@@ -28,7 +23,16 @@ class MainActivity : AppCompatActivity(),MainContract.View {
         setContentView(R.layout.activity_main)
         main_text.text = createApplicationScreenMessage()
 
-        presenter = MainPresenter(this, RxFactoriesImpl())
+        val schedulerModuleImpl = SchedulerModuleImpl(
+            SchedulerImpl(Schedulers.io()),
+            SchedulerImpl(AndroidSchedulers.mainThread()),
+            SchedulerImpl(Schedulers.computation())
+        )
+
+        presenter = MainPresenter(
+            this,
+            RxFactoriesImpl(schedulerModuleImpl)
+        )
     }
 
     override fun showMessage(message: String) {

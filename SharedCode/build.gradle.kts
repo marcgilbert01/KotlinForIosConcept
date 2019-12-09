@@ -38,6 +38,7 @@ kotlin {
         implementation("com.google.code.gson:gson:2.8.5")
         implementation("com.beust:klaxon:4.0.2")
         implementation("io.reactivex.rxjava2:rxkotlin:2.4.0")
+        implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
     }
 }
 
